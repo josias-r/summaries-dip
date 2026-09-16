@@ -1,0 +1,18 @@
+{
+	"wrap with rect": {
+		"scope": "typst",
+		"prefix": "r",
+		"body": [
+			"#rect(${2})[\n\t${1:$TM_SELECTED_TEXT}\n]"
+		],
+		"description": "#rect wrap",
+	},
+	"wrap with image_rect": {
+		"scope": "typst",
+		"prefix": "ri",
+		"body": [
+			"#rect(inset: 1pt)[\n\t${1:$TM_SELECTED_TEXT}\n]"
+		],
+		"description": "#rect wrap",
+	},
+}
