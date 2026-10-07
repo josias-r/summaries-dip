@@ -35,14 +35,12 @@
   )
 }
 
-#let section_00 = include "sections/00_py_cheatsheet.typ";
-#let section_01 = include "sections/01_introduction.typ";
-#let section_02 = include "sections/02_intensity.typ";
-
 #columns(4, gutter: 0pt)[
   #stack(
-    section_00,
-    section_01,
-    section_02,
+    include "sections/00_py_cheatsheet.typ",
+    include "sections/01_introduction.typ",
+    include "sections/02_intensity.typ",
+    include "sections/03_spacial_filtering.typ",
+    include "sections/04_frequency_domain.typ",
   )
 ]
