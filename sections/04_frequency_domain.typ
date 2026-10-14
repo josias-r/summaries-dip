@@ -36,7 +36,7 @@
   + 2d Fourier Transform
 ]
 #rect()[
-  TPdp:
+  TODO:
   + 2d DFT - #highlight[Convolution Theorem  - important]
   + spacial domain - frequency domain -> convolution theorem
   + DC part/Value from DFT
