@@ -2,7 +2,7 @@
 #set text(size: 5.5pt, font: "Arial")
 #set rect(width: 100%)
 #set par(leading: 0.25em, spacing: 0.275em)
-#set table(stroke: 0.5pt)
+#set table(stroke: 0.5pt, inset: 3pt)
 
 #show rect: it => {
   block(it, below: 0em)
