@@ -19,7 +19,7 @@
   #image("/assets/image-27.png")
 ]
 #rect(inset: 1pt)[
-  #image("/assets/image-1.png")
+  #align(center, image(width: 26em, "/assets/image-1.png"))
 ]
 #rect()[
   *Furier*: Any _periodic_ function can be decomposed into a sum of sine and cosine terms
