@@ -90,10 +90,10 @@
   #box(inset: 2pt)[
     To achieve sharpening, we can add the laplacian filtered image to the original image:
 
-    $ g(x, y) = f(x, y) + c lr([nabla^2 f(x, y)]) $
+    $ g(x, y) = f(x, y) + c dot (f star w)(x,y) $
 
-    where $f(x, y)$ and $g(x, y)$ are the input and sharpened images, respectively. The constant $c = -1$ for Laplacian kernels with a positive center coefficient, and $c = 1$ otherwise.
-
+    where $f(x, y)$ and $g(x, y)$ are the input and sharpened images, respectively. With _positive_ constant $c=1$ for kernel with _positive_ center, and _negative_ constant $c$ for kernel with _negative_ center.\
+    \
     Properties of the Laplacian:
     - The Laplacian is _isotropic_ (rotationally symmetric)
     - The kernel sums to 0 (constant regions therefore become 0)
