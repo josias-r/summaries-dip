@@ -60,17 +60,50 @@
   2D convolution can be implemented *as two 1D convolutions* (faster)!
 
 ]
-== Derivatives
+== Non-linear Filters
+#rect(inset: 1pt)[
+  #box(inset: 2pt)[
+    Sort the pixel values in the neighborhood and take the median value as the new pixel value.
+
+    Computationally more expensive than linear filters, but can yield better results for certain types of noise (e.g. salt-and-pepper noise).
+  ]
+  #image("/assets/image-23.png")
+]
+= Highpass Filtering (sharpening)
+== Discrete 1st Derivative
 #rect()[
+  *Previtt* (box blurr $(1,1,1) dot "derivative"$):
+  $ w_x = mat(-1, 0, 1; -1, 0, 1; -1, 0, 1) quad quad w_y = mat(-1, -1, -1; 0, 0, 0; 1, 1, 1) $
+  *Sobel* (gaussian blurr $(1,2,1) dot "derivative"$):
+  $ w_x = mat(-1, 0, 1; -2, 0, 2; -1, 0, 1) quad quad w_y = mat(-1, -2, -1; 0, 0, 0; 1, 2, 1) $
 
-  TODO: CDF / gaussian blur as LOWPASS filter vs HIGHPASS filtering derivatives
-  TODO:
-  + Highpass/Lowpass filtering
-  + first derivative vs second derivative.
-  + How to apply derivative on discrete aka image Data.
-  + How to apply in 2D = Gradient application
-  + Laplace Filter Kernels
-  + Unsharp Mask vs Laplace/Derivative
+  In both cases to get full full magnitude in both directions (good ol' Pythagorean): $ G = sqrt(w_x^2 + w_y^2) $
+]
+== Laplacian 2nd Derivative
+#rect(inset: 1pt)[
+  #box(inset: 2pt)[
+    a) along x and y\
+    b) additionally along diagonals\
+    c/d) negative of a) and b)\
+  ]
+  #image("/assets/image-25.png")
+  #box(inset: 2pt)[
+    To achieve sharpening, we can add the laplacian filtered image to the original image:
 
+    $ g(x, y) = f(x, y) + c lr([nabla^2 f(x, y)]) $
 
+    where $f(x, y)$ and $g(x, y)$ are the input and sharpened images, respectively. The constant $c = -1$ for Laplacian kernels with a positive center coefficient, and $c = 1$ otherwise.
+
+    Properties of the Laplacian:
+    - The Laplacian is _isotropic_ (rotationally symmetric)
+    - The kernel sums to 0 (constant regions therefore become 0)
+    - The resulting images pixels also sum to 0 (implying there are also negative values, and further processing is needed, like sharpening)
+  ]
+]
+== Unsharp Masking
+#rect(inset: 1pt)[
+  #image("/assets/image-26.png")
+  #box(inset: 2pt)[
+    Unsharp mask retrieved by applying low-pass, then subtracting it from original, leaving only the peaks. Apply mask with desired factor $k$ to get a sharpened image. (an old sharpening method)
+  ]
 ]
