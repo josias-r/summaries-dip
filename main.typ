@@ -44,5 +44,6 @@
     include "sections/03_spacial_filtering.typ",
     include "sections/04_frequency_domain.typ",
     include "sections/05_morphological_ip.typ",
+    include "sections/06_color_image_processing.typ",
   )
 ]
