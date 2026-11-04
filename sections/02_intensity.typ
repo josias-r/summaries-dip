@@ -5,7 +5,7 @@
 == Log Transformations
 #rect()[
   $ s = underbrace(c, "usually  = 1") * log(1 + r) $
-  #align(center, image(width: 10em, "/assets/image-16.png"))
+  #align(center, image(width: 15em, "/assets/image-16.png"))
 ]
 == Gamma Correction
 #rect()[

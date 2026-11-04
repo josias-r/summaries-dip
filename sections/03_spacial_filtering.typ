@@ -77,7 +77,7 @@
   *Sobel* (gaussian blurr $(1,2,1) dot "derivative"$):
   $ w_x = mat(-1, 0, 1; -2, 0, 2; -1, 0, 1) quad quad w_y = mat(-1, -2, -1; 0, 0, 0; 1, 2, 1) $
 
-  In both cases to get full full magnitude in both directions (good ol' Pythagorean): $ G = sqrt(w_x^2 + w_y^2) $
+  In both cases to get full full magnitude in both directions (good ol' Pythagorean): $G = sqrt(G_x^2 + G_y^2)$ (pointwise)
 ]
 == Laplacian 2nd Derivative
 #rect(inset: 1pt)[

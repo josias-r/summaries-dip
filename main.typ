@@ -45,5 +45,6 @@
     include "sections/04_frequency_domain.typ",
     include "sections/05_morphological_ip.typ",
     include "sections/06_color_image_processing.typ",
+    include "sections/07_lines_and_edges.typ",
   )
 ]
