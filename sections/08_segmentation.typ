@@ -5,7 +5,7 @@
   + TODO: multiple threshold
   + TODO formula for auto thresholding
 ]
-== Basic Global THresholding and Otsu's Method
+== Basic Global Thresholding and Otsu's Method
 #rect()[
   + TODO: basic method
   + TODO: Otsu's method (class variance and statistic stuff)
@@ -15,4 +15,9 @@
   + TODO: histeresis thresholding
   + TODO: Multivariable thresholding
   + TODO: Color clustering/K-Means
+]
+== Watershed Segmentation
+#rect()[
+  TODO: watershed algorithm
+  TODO: post processing
 ]

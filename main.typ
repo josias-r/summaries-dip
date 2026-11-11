@@ -47,5 +47,6 @@
     include "sections/06_color_image_processing.typ",
     include "sections/07_lines_and_edges.typ",
     include "sections/08_segmentation.typ",
+    include "sections/09_feature_extraction.typ",
   )
 ]
