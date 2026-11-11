@@ -18,6 +18,6 @@
 ]
 == Watershed Segmentation
 #rect()[
-  TODO: watershed algorithm
-  TODO: post processing
+  + TODO: watershed algorithm
+  + TODO: post processing
 ]
