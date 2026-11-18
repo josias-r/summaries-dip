@@ -4,6 +4,8 @@
 #set par(leading: 0.25em, spacing: 0.275em)
 #set table(stroke: 0.5pt, inset: 3pt)
 
+#set list(marker: ([•], [◦], [‣]))
+
 #show rect: it => {
   block(it, below: 0em)
 }
@@ -48,5 +50,6 @@
     include "sections/07_lines_and_edges.typ",
     include "sections/08_segmentation.typ",
     include "sections/09_feature_extraction.typ",
+    include "sections/10_classification.typ",
   )
 ]
