@@ -24,13 +24,24 @@
     inset: 0.3em,
   )
 }
-
 #show heading.where(level: 2): it => {
   set text(fill: black, weight: "bold", size: 5pt)
   set align(center)
   set block(above: 0em, below: 0em)
   rect(
     fill: silver,
+    stroke: 0.5pt + black,
+    width: 100%,
+    it.body,
+    inset: 0.3em,
+  )
+}
+#show heading.where(level: 3): it => {
+  set text(fill: black, weight: "bold", style: "italic", size: 5pt)
+  set align(center)
+  set block(above: 0em, below: 0em)
+  rect(
+    fill: luma(245),
     stroke: 0.5pt + black,
     width: 100%,
     it.body,
@@ -51,5 +62,6 @@
     include "sections/08_segmentation.typ",
     include "sections/09_feature_extraction.typ",
     include "sections/10_classification.typ",
+    include "sections/11_local_features.typ",
   )
 ]
